@@ -21,5 +21,13 @@ class PostsController < ApplicationController
       params.require(:post).permit(:title, :content)
     end
     # ***** 以上を追加 *****
-  
+   
+      def show
+        # ***** 以下を追加 *****
+        @post = Post.find(params[:id])
+        # ***** 以上を追加 *****
+      end
+    
+      # 略
+    
 end
